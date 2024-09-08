@@ -1,0 +1,177 @@
+/* Base styles */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e8eaec;
+    padding: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Space between elements */
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centering the form horizontally */
+}
+
+form h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-box .field {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid hsl(187, 85%, 43%);
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    margin-top: 8px;
+}
+
+.input-box .field.mess {
+    height: 200px;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 6px;
+    background: #2a9acb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 25px;
+    transition: 0.5s;
+}
+
+form button:hover {
+    background: hsl(199, 100%, 33%);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact {
+        padding: 10px;
+    }
+
+    form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    form h2 {
+        font-size: 28px;
+    }
+
+    .input-box .field {
+        font-size: 15px;
+        height: 45px;
+    }
+
+    .input-box .field.mess {
+        height: 180px;
+    }
+
+    form button {
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 26px;
+    }
+
+    .input-box .field {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .input-box .field.mess {
+        height: 150px;
+    }
+
+    form button {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    form {
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 24px;
+    }
+
+    .input-box .field {
+        font-size: 13px;
+        height: 35px;
+    }
+
+    .input-box .field.mess {
+        height: 120px;
+    }
+
+    form button {
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 320px) {
+    form {
+        padding: 10px;
+    }
+
+    form h2 {
+        font-size: 20px;
+    }
+
+    .input-box .field {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .input-box .field.mess {
+        height: 100px;
+    }
+
+    form button {
+        height: 35px;
+        font-size: 12px;
+    }
+}

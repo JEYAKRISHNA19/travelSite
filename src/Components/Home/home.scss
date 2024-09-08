@@ -1,0 +1,266 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackcolor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 255, 235);
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+
+    .homeContent {
+        width: 100%;
+        max-width: 1200px; /* Add max-width for larger screens */
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--whiteColor);
+        z-index: 100;
+    }
+
+    .textDiv {
+        padding: 2rem 0;
+        text-align: center;
+
+        .smallText {
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .homeTitle {
+            position: relative;
+            font-size: 1.8rem;
+            margin: 0 auto; /* Center title */
+        }
+    }
+
+    .cardDiv {
+        position: relative;
+        padding: 2rem;
+        background: var(--whiteColor);
+        border-radius: 10px;
+        display: grid;
+        gap: 2rem; /* Adjust gap between grid items */
+        grid-template-columns: 1fr; /* Default to a single column */
+
+        label {
+            display: block;
+            color: var(--textColor);
+            padding-bottom: 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .input {
+            height: 40px;
+            padding: 0 1rem;
+            background: var(--inputColor);
+            border-radius: 3rem;
+            display: flex;
+            justify-content: space-between;; /* Center content vertically */
+            margin-bottom: 0rem;
+            input {
+                background: none;
+                border: none;
+                outline: none;
+                width: 100%;
+                font-size: 13px;
+                font-weight: 500;
+                align-items: center;
+                justify-content: space-between;
+
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
+
+            .icon {
+                font-size: 18px;
+                color: var(--PrimaryColor) !important;
+                margin-left: 10px;
+            }
+        }
+
+        .searchOptions {
+            background: var(--gradientColor);
+            padding: 5px 1rem;
+            border-radius: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            bottom: -0.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            
+            
+
+            &:hover {
+                background: var(--PrimaryColor);
+            }
+
+            .icon {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .homeFooterIcons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .icons {
+            font-size: 20px;
+            color: var(--whiteColor);
+            font-weight: 600;
+
+            &:hover {
+                color: var(--PrimaryColor);
+            }
+        }
+    }
+}
+
+/* Responsive styles for various screen sizes */
+
+@media screen and (max-width: 374px) {
+    .home {
+        .homeContent {
+            padding: 4rem 1rem 2rem;
+
+            .cardDiv {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+    .home {
+        .homeContent {
+            padding: 5rem 1.5rem 2.5rem;
+
+            .cardDiv {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 499px) {
+    .home {
+        .homeContent {
+            padding: 6rem 2rem 3rem;
+
+            .cardDiv {
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .home {
+        .homeContent {
+            .textDiv {
+                .smallText {
+                    font-size: 16px;
+                }
+
+                .homeTitle {
+                    font-size: 2.3rem;
+
+                    &::after {
+                        height: 5px;
+                        width: 145px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 539px) {
+    .home {
+        .homeContent {
+            .cardDiv {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem; /* Adjust grid gap */
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .home {
+        height: 85vh;
+
+        .homeContent {
+            padding: 8rem 2rem 3rem;
+            
+            .cardDiv{
+                padding: 2rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home {
+        height: 80vh;
+
+        .homeContent {
+            padding: 8rem 3rem 3rem;
+
+            .cardDiv {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 2rem;
+                gap: 2.5rem;
+            }
+        }
+    }
+}
